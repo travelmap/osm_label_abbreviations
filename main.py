@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import argparse
 import psycopg2
 import sys
 from sys import stdout
@@ -6,12 +7,27 @@ import abbr_dict
  
 def main():
 
+    #get required args from commandline
+    parser = argparse.ArgumentParser(description='OSM label abbreviations')
+    parser.add_argument('-d','--db', help='Database name. Example; osm_amsterdam',required=True)
+    parser.add_argument('-l','--language', help='Language to apply. Supported; [dutch,english]', required=True)
+    args = parser.parse_args()
+
+    #select dict
+    language_abbreviations = abbr_dict.abbreviations.get(args.language)
+    if language_abbreviations == None:
+        sys.exit("Language '"+args.language+"' not yet supported")
+
+    #connect to database
     try:
-        conn_string = "host='localhost' dbname='osm_test' user='postgres' password=''"
+        conn_string = "host='localhost' dbname='"+args.db+"' user='postgres' password=''"
         conn = psycopg2.connect(conn_string)
 	print("Connected to database!")
     except:    
-        print("Unable to connecto to database: {}".format(conn_string))
+	sys.exit("Unable to connect to to database: {}".format(conn_string))
+
+    #def psql cursor
+    cursor = conn.cursor()
 
     #def osm tables
     osm_tables = {'osm_motorways',	#(optional)
@@ -21,12 +37,6 @@ def main():
 		  'osm_motorways_gen1',	#(optional)
 		  'osm_mainroads_gen0',
 		  'osm_mainroads_gen1'}
-
-    #def psql cursor
-    cursor = conn.cursor()
-
-    #select dict
-    language_abbreviations = abbr_dict.abbreviations.get('dutch')
 
     #loop through osm_tables
     for osm_table in osm_tables:
@@ -43,7 +53,7 @@ def main():
 		    conn.commit()
 		    print("done!")
 		except Exception as error:
-		    print("error! {}".format(error))
+		    sys.exit("error! {}".format(error))
 
     if conn:
 	conn.close()    
