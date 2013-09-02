@@ -8,9 +8,13 @@ Python script that executes a number of psql queries that rename osm labels to t
 Please backup your tables before running the script!
 
 #### Running the script
-Run the script from console via
+The script takes 2 argumens:
+* `-d` the database to use.
+* `-l` the language to apply. The languages `dutch` and `english` are currently supported.
+
+To run the script:
 ```
-python main.py
+python main.py -d osm_example_db -l english
 ```
 
 #### License
