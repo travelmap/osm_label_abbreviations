@@ -1,4 +1,4 @@
-abbreviations = {
+﻿abbreviations = {
     'dutch':[
 	{'match':'^Burgemeester\s+',	 'replace':'Burg. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Burg. Patijnlaan" = "Burgemeester Patijnlaan"'},
 	{'match':'^Commandant\s+',	 'replace':'Cmdt. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Cmdt. Weynsstraat" = "Commandant Weynsstraat"'},
@@ -85,5 +85,14 @@ abbreviations = {
         {'match':'\s+Walk$',	 	 'replace':' Wlk',	'concatenated':'no',	'separable':'n/a'},
         {'match':'\s+Walkway$',	 	 'replace':' Wky',	'concatenated':'no',	'separable':'n/a'},
         {'match':'\s+Yard$',	 	 'replace':' Yd',	'concatenated':'no',	'separable':'n/a'}
+    ]
+    'turkish':[
+        {'match':'\s+Sokak$',    'replace':' Sok',  'concatenated':'no',    'separable':'yes'},
+        {'match':'\s+Sokağı$',   'replace':' Sk',   'concatenated':'no',    'separable':'yes', 'note':'Susam Sk.'},
+        {'match':'\s+Sokağı$',   'replace':' Sok',  'concatenated':'no',    'separable':'yes'},
+        {'match':'\s+Cadde$',    'replace':' Cd',   'concatenated':'no',    'separable':'yes', 'note':'Mostly with numbers, e.g. 3. Cadde'},
+        {'match':'\s+Caddesi$',  'replace':' Cd',   'concatenated':'no',    'separable':'yes', 'note':'İnonü Caddesi'},
+        {'match':'\s+Bulvar$',   'replace':' Bl',   'concatenated':'no',    'separable':'yes'},
+        {'match':'\s+Bulvarı$',  'replace':' Bl',   'concatenated':'no',    'separable':'yes', 'note':'Atatürk Bulvarı'},
     ]
 };
