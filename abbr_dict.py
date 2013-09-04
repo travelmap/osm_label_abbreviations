@@ -85,14 +85,36 @@
         {'match':'\s+Walk$',	 	 'replace':' Wlk',	'concatenated':'no',	'separable':'n/a'},
         {'match':'\s+Walkway$',	 	 'replace':' Wky',	'concatenated':'no',	'separable':'n/a'},
         {'match':'\s+Yard$',	 	 'replace':' Yd',	'concatenated':'no',	'separable':'n/a'}
-    ]
+    ],
+    'french':[
+        {'match':'(^|\s+)Allée(\s+|$)',	 'replace':'\\1All.\\2','concatenated':'no',	'separable':'n/a',	'note':'Example: Allée du Clos, Grande Allée and Grande Allée des Charmilles'},
+        {'match':'(^|\s+)Avenue(\s+|$)', 'replace':'\\1Av.\\2',	'concatenated':'no',	'separable':'n/a',	'note':'Example: 11e Avenue, Petite Avenue de la Pyramide and Avenue du Nord'},
+        {'match':'^Boulevard\s+$',	 'replace':'Bd ',	'concatenated':'no',	'separable':'n/a',	'note':'Example: Boulevard de la Gare'},
+        {'match':'(^|\s+)Chemin(\s+|$)', 'replace':'\\1Che.\\2','concatenated':'no',	'separable':'n/a' ,	'note':'Grand-Chemin. Example: Chemin de Beauval, Rue du Chemin Vert and Petit Chemin'},
+        {'match':'^Passage\s+$', 	 'replace':'Pass. ',	'concatenated':'no',	'separable':'n/a',	'note':'Example: Passage des Italiens'},
+        {'match':'^Place\s+$',	 	 'replace':'PL ',	'concatenated':'no',	'separable':'n/a',	'note':'Example: Place des Fusillés de Châteaubriant'},
+        {'match':'(\w+)place$',	 	 'replace':'\\1Pl.',	'concatenated':'yes',	'separable':'n/a' ,	'note':'Grand-place'},
+        {'match':'^Saint\s+',	 	 'replace':'St ',	'concatenated':'yes',	'separable':'n/a' ,	'note':'Same as English'},
+        {'match':'^Sainte\s+',	 	 'replace':'Ste ',	'concatenated':'yes',	'separable':'n/a'},
+        {'match':'(^|\s+)Terrasse(\s+|$)', 'replace':'\\1TSSE\\2',	'concatenated':'no',	'separable':'n/a',	'note':'Example:Allée de la Terrasse and Terrasse Modigliani'},
+        {'match':'(^|\s+)Terrasses(\s+|$)', 'replace':'\\1TSSE\\2',	'concatenated':'no',	'separable':'n/a'	'note':'Example:Avenue des Terrasses'},
+    ],
+    'german':[
+	{'match':'\s+Platz$', 		 'replace':' Pl', 	'concatenated':'no', 	'separable':'yes'},
+	{'match':'(\w+)platz$', 	 'replace':'\\1pl.', 	'concatenated':'yes', 	'separable':'yes'},
+	{'match':'\s+Straße$', 		 'replace':' Str.', 	'concatenated':'no', 	'separable':'yes'},
+        {'match':'\s+Strasse$',		 'replace':' Str.', 	'concatenated':'no', 	'separable':'yes'},
+        {'match':'(\w+)straße$',	 'replace':'\\1str.', 	'concatenated':'yes', 	'separable':'yes'}, 
+	{'match':'(\w+)strasse$',	 'replace':'\\1str.', 	'concatenated':'yes', 	'separable':'yes'}
+    ],
     'turkish':[
-        {'match':'\s+Sokak$',    'replace':' Sok',  'concatenated':'no',    'separable':'yes'},
-        {'match':'\s+Sokağı$',   'replace':' Sk',   'concatenated':'no',    'separable':'yes', 'note':'Susam Sk.'},
-        {'match':'\s+Sokağı$',   'replace':' Sok',  'concatenated':'no',    'separable':'yes'},
-        {'match':'\s+Cadde$',    'replace':' Cd',   'concatenated':'no',    'separable':'yes', 'note':'Mostly with numbers, e.g. 3. Cadde'},
-        {'match':'\s+Caddesi$',  'replace':' Cd',   'concatenated':'no',    'separable':'yes', 'note':'İnonü Caddesi'},
-        {'match':'\s+Bulvar$',   'replace':' Bl',   'concatenated':'no',    'separable':'yes'},
-        {'match':'\s+Bulvarı$',  'replace':' Bl',   'concatenated':'no',    'separable':'yes', 'note':'Atatürk Bulvarı'},
+        {'match':'\s+Sokak$',    	 'replace':' Sok',  'concatenated':'no',    'separable':'yes'},
+        {'match':'\s+Sokağı$',   	 'replace':' Sk',   'concatenated':'no',    'separable':'yes', 		'note':'Example: Susam Sk.'},
+        {'match':'\s+Sokağı$',   	 'replace':' Sok',  'concatenated':'no',    'separable':'yes'},
+        {'match':'\s+Cadde$',    	 'replace':' Cd',   'concatenated':'no',    'separable':'yes', 		'note':'Mostly with numbers, Example: 3. Cadde'},
+        {'match':'\s+Caddesi$',  	 'replace':' Cd',   'concatenated':'no',    'separable':'yes', 		'note':'Example: İnonü Caddesi'},
+        {'match':'\s+Bulvar$',   	 'replace':' Bl',   'concatenated':'no',    'separable':'yes'},
+        {'match':'\s+Bulvarı$',  	 'replace':' Bl',   'concatenated':'no',    'separable':'yes', 		'note':'Example: Atatürk Bulvarı'},
     ]
+
 };
