@@ -48,6 +48,11 @@
         {'match':'^Travessia\s+',	 'replace':'Trav. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'???'},
         {'match':'^Via\s+',	 	 'replace':'V. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'???'}
     ],
+    'czech':[
+        {'match':'^(.{5,})\s+Ulice(\s+|$)','replace':'\\1 Ul.\\2',	'concatenated':'no',	'separable':'yes',	'note':'Example: Havířská ulice I, IV. ulice'},
+        {'match':'^Náměstí\s+(.{4,})$',	 'replace':'Nám. \\1',	'concatenated':'no',	'separable':'yes',	'note':'Example: náměstí Karla IV.'},
+        {'match':'^(.{4,})\s+Náměstí$',	 'replace':'\\1 Nám.',	'concatenated':'no',	'separable':'yes',	'note':'Example: Kozinovo náměstí'},
+    ],
     'dutch':[
 	{'match':'^Burgemeester\s+',	 'replace':'Burg. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Burg. Patijnlaan" = "Burgemeester Patijnlaan"'},
 	{'match':'^Commandant\s+',	 'replace':'Cmdt. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Cmdt. Weynsstraat" = "Commandant Weynsstraat"'},
@@ -166,12 +171,37 @@
         {'match':'(^|\s+)Terrasses(\s+|$)', 'replace':'\\1TSSE\\2',	'concatenated':'no',	'separable':'n/a',	'note':'Example:Avenue des Terrasses'},
     ],
     'german':[
+	{'match':'^(.{5,})allee$', 	 'replace':'\\1Al.', 	'concatenated':'no', 	'separable':'yes',	'note':'Added for Austria. Example: lindenallee, lichte allee'},
+	{'match':'^(.{5,})gasse$', 	 'replace':'\\1G', 	'concatenated':'no', 	'separable':'yes',	'note':'Added for Austria. Example: burggasse, karl-lowe-Gasse'},
 	{'match':'\s+Platz$', 		 'replace':' Pl', 	'concatenated':'no', 	'separable':'yes'},
 	{'match':'(\w+)platz$', 	 'replace':'\\1pl.', 	'concatenated':'yes', 	'separable':'yes'},
 	{'match':'\s+Straße$', 		 'replace':' Str.', 	'concatenated':'no', 	'separable':'yes'},
         {'match':'\s+Strasse$',		 'replace':' Str.', 	'concatenated':'no', 	'separable':'yes'},
         {'match':'(\w+)straße$',	 'replace':'\\1str.', 	'concatenated':'yes', 	'separable':'yes'}, 
 	{'match':'(\w+)strasse$',	 'replace':'\\1str.', 	'concatenated':'yes', 	'separable':'yes'}
+    ],
+    'italian':[
+        {'match':'^Campo\s+',		 'replace':'C.po ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Corso\s+',		 'replace':'C.so ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Corte\s+',		 'replace':'C.te ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Fondamenta\s+',	 'replace':'F.ta ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Largo\s+',		 'replace':'L.go ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Località\s+',	 'replace':'Loc. ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Piazza\s+',		 'replace':'P.za ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Piazza\s+',		 'replace':'P.zza ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Piazzale\s+',	 'replace':'P.le ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Piazzetta\s+',	 'replace':'P.ta ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Ponte\s+',		 'replace':'P.te ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Porta\s+',		 'replace':'P.ta ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Salizada\s+',	 'replace':'S.da ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Strada Comunale\s+',	 'replace':'SC ',	'concatenated':'yes',	'separable':'yes'},
+        {'match':'^Strada Provinciale\s+','replace':'SP ',	'concatenated':'yes',	'separable':'yes'},
+        {'match':'^Strada Regionale\s+', 'replace':'SR ',	'concatenated':'yes',	'separable':'yes'},
+        {'match':'^Strada Statale\s+',	 'replace':'SS ',	'concatenated':'yes',	'separable':'yes'},
+        {'match':'^Via\s+',		 'replace':'V. ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Viale\s+',		 'replace':'V.le ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Vicolo\s+',		 'replace':'V.lo ',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'^Stazione\s+',	 'replace':'Staz. ',	'concatenated':'no',	'separable':'n/a'},
     ],
     'spanish':[
         {'match':'^Angosta\s+',	 	 'replace':'Angta. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Narrow passage'},
@@ -194,7 +224,7 @@
         {'match':'^Pasillo\s+',		 'replace':'Psllo. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Corridor'},
         {'match':'(^|\s+)Plaza\s+',	 'replace':'\\1Pl. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Square. Example: Plaza Avrillé and Mares de la Plaza de Mayo},
         {'match':'^Plazoleta\s+',	 'replace':'Pzta. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Small square'},
-        {'match':'^Plazuela\s+(.{4,})^', 'replace':'Plzla. \\1','concatenated':'no',	'separable':'n/a' ,	'note':'Small square. Example: Plazuela à la gare and Plazuela St'},
+        {'match':'^Plazuela\s+(.{4,})$', 'replace':'Plzla. \\1','concatenated':'no',	'separable':'n/a' ,	'note':'Small square. Example: Plazuela à la gare and Plazuela St'},
         {'match':'\s+Prazuela(\s+|$)',	 'replace':' Przla.\\1','concatenated':'no',	'separable':'n/a' ,	'note':'Small square. Example: Del Prazuela Carmen and gente de la prazuela'},
         {'match':'^Rambla\s+',		 'replace':'Rbla. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Boulevard. Example: RAMBLA, carrer Rambla, Rambla del Sol, la rambla'},
         {'match':'\s+Rambla(\s+|$)',	 'replace':' Rbla.\\1',	'concatenated':'no',	'separable':'n/a' ,	'note':'Boulevard. Example: RAMBLA, carrer Rambla, Rambla del Sol, la rambla'},
@@ -205,7 +235,20 @@
         {'match':'^Travesía\s+',	 'replace':'Trva. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Side street. Example: Travesía de la Primavera'},
         {'match':'^Viviendas\s+',	 'replace':'Vvdas. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Block of flats. Example: PROMOTORA de VIVIENDAS and Viviendas en la calle Bravo Murillo'},
         {'match':'\s+Viviendas(\s+|$)',	 'replace':' Vvdas.\\1','concatenated':'no',	'separable':'n/a' ,	'note':'Block of flats. Example: PROMOTORA de VIVIENDAS and Viviendas en la calle Bravo Murillo'},
-    ]
+    ],
+    'swedish':[
+        {'match':'^(.{5,})väg(en)*$',	 'replace':'\\1v.',	'concatenated':'yes',	'separable':'yes' ,	'note':'"way" Example: Ringvägen, Vågens gata'},
+        {'match':'^(.{5,})gata(n)*$',	 'replace':'\\1g.',	'concatenated':'yes',	'separable':'yes' ,	'note':'"street" Example: Brunnsgatan, Hokens gata'},
+        {'match':'^(.{4,})gränd(en)*$',	 'replace':'\\1gr.',	'concatenated':'yes',	'separable':'yes' ,	'note':'"ally" Example: Tullgränd, Pers gränd'},
+        {'match':'^Gamla\s+(.{5,})$',	 'replace':'G:la\\1',	'concatenated':'yes',	'separable':'yes' ,	'note':'"old" Example: Gamla vägen'},
+        {'match':'^(.{4,})stig(en)*$',	 'replace':'\\1st.',	'concatenated':'yes',	'separable':'yes' ,	'note':'"path" Example: Tjäderstigen, Harry Martinsons stig'},
+        {'match':'^Sankt\s+(.{4,})$',	 'replace':'S:t \\1',	'concatenated':'yes',	'separable':'yes' ,	'note':'"saint" Example: Sankt Eriksplan'},
+        {'match':'^(.{5,})plats(en)*$',	 'replace':'\\1pl',	'concatenated':'yes',	'separable':'yes' ,	'note':'"square" Example: Olof Palmes plats, Medborgarplatsen'},
+        {'match':'^Södra\s+(.{4,})$',	 'replace':'S. \\1',	'concatenated':'yes',	'separable':'yes' ,	'note':'"south" Example: Södra Hamnvägen, Södra vägen'},
+        {'match':'^Norra\s+(.{4,})$',	 'replace':'N. \\1',	'concatenated':'yes',	'separable':'yes' ,	'note':'"north" Example: Norra Agnegatan'},
+        {'match':'^Östra\s+(.{4,})$',	 'replace':'Ö. \\1',	'concatenated':'yes',	'separable':'yes' ,	'note':'"east" Example: Östra Tegelviksslingan'},
+        {'match':'^Västra\s+(.{4,})$',	 'replace':'V. \\1',	'concatenated':'yes',	'separable':'yes' ,	'note':'"west" Example: Västra Brobänken'},
+    ],
     'turkish':[
         {'match':'\s+Sokak$',    	 'replace':' Sok',  'concatenated':'no',    'separable':'yes'},
         {'match':'\s+Sokağı$',   	 'replace':' Sk',   'concatenated':'no',    'separable':'yes', 		'note':'Example: Susam Sk.'},
@@ -215,5 +258,4 @@
         {'match':'\s+Bulvar$',   	 'replace':' Bl',   'concatenated':'no',    'separable':'yes'},
         {'match':'\s+Bulvarı$',  	 'replace':' Bl',   'concatenated':'no',    'separable':'yes', 		'note':'Example: Atatürk Bulvarı'},
     ]
-
 };
