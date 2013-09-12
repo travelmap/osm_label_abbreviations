@@ -138,7 +138,7 @@
         {'match':'\s+Terrace$',	 	 'replace':' Ter',	'concatenated':'no',	'separable':'n/a'},
         {'match':'\s+Walk$',	 	 'replace':' Wlk',	'concatenated':'no',	'separable':'n/a'},
         {'match':'\s+Walkway$',	 	 'replace':' Wky',	'concatenated':'no',	'separable':'n/a'},
-        {'match':'\s+Yard$',	 	 'replace':' Yd',	'concatenated':'no',	'separable':'n/a'}
+        {'match':'\s+Yard$',	 	 'replace':' Yd',	'concatenated':'no',	'separable':'n/a'},
         {'match':'^North\s+(.{5,})$',	 'replace':'N \\1',	'concatenated':'no',	'separable':'n/a',	'note':'Example: west 1st st, east 75th st, north st, north 37th ave'},
         {'match':'^Northeast\s+(.{5,})$','replace':'NE \\1',	'concatenated':'no',	'separable':'n/a'},
         {'match':'^Northwest\s+(.{5,})$','replace':'NW \\1',	'concatenated':'no',	'separable':'n/a'},
@@ -222,7 +222,7 @@
         {'match':'^Pasaje\s+',	 	 'replace':'Psaje. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Alleway. Example: Pasaje Dopla'},
         {'match':'^Paseo marítimo\s+',	 'replace':'Psmar. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Promenade'},
         {'match':'^Pasillo\s+',		 'replace':'Psllo. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Corridor'},
-        {'match':'(^|\s+)Plaza\s+',	 'replace':'\\1Pl. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Square. Example: Plaza Avrillé and Mares de la Plaza de Mayo},
+        {'match':'(^|\s+)Plaza\s+',	 'replace':'\\1Pl. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Square. Example: Plaza Avrillé and Mares de la Plaza de Mayo'},
         {'match':'^Plazoleta\s+',	 'replace':'Pzta. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Small square'},
         {'match':'^Plazuela\s+(.{4,})$', 'replace':'Plzla. \\1','concatenated':'no',	'separable':'n/a' ,	'note':'Small square. Example: Plazuela à la gare and Plazuela St'},
         {'match':'\s+Prazuela(\s+|$)',	 'replace':' Przla.\\1','concatenated':'no',	'separable':'n/a' ,	'note':'Small square. Example: Del Prazuela Carmen and gente de la prazuela'},
