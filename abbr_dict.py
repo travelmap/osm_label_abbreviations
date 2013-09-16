@@ -58,8 +58,8 @@
         {'match':'\s+Boulevard$',	 'replace':' Blvd',	'concatenated':'no',	'separable':'n/a',	'note':'Example: Zeus Boulevard, Boulevarden'},
         {'match':'^(.{5,})Gade$',	 'replace':'\\1Gd.',	'concatenated':'no',	'separable':'n/a',	'note':'Street. Example: Ågade, Vester Søgade, Niels Juels Gade'},
         {'match':'^Lille\s+',	         'replace':'Ll. ',	'concatenated':'no',	'separable':'n/a',	'note':'Lesser (small). Example: Lille Lyngbyvej, Lillevænget, Stenlillevej'},
-        {'match':'(^.{5,}|^)Nordre(.{5,})$', 'replace'\\1Ndr\\1',	'concatenated':'no',	'separable':'n/a',	'note':'Northern. Example: Nordre Sørække, Haveforeningen Nordre Vang'},
-        {'match':'^(.{5,})Plads$',	 'replace':'\\1Pl.',	'concatenated':'no',	'separable':'n/a' ,	'note':'Quare. Example: Enghave Plads, Jernbanepladsen'}
+        {'match':'(^.{5,}|^)Nordre(.{5,})$', 'replace':'\\1Ndr\\1',	'concatenated':'no',	'separable':'n/a',	'note':'Northern. Example: Nordre Sørække, Haveforeningen Nordre Vang'},
+        {'match':'^(.{5,})Plads$',	 'replace':'\\1Pl.',	'concatenated':'no',	'separable':'n/a' ,	'note':'Quare. Example: Enghave Plads, Jernbanepladsen'},
         {'match':'(^.{5,}|^)S[oø]+ndre(.{5,})$', 'replace':'\\1Sdr\\1',	'concatenated':'no',	'separable':'n/a',	'note':'Southern. Example: Søndre Damtoften, Ledøje Søndre Gade'},
         {'match':'(^.{5,}|^)Store\s+',	 'replace':'\\1St. ',	'concatenated':'no',	'separable':'n/a',	'note':'Greater (big). Example: Store Valbyvej, Ishøj Store Torv'},
         {'match':'^(.{5,})Stræde$',	 'replace':'\\1Str.',	'concatenated':'no',	'separable':'n/a',	'note':'Alley. Example: Steffen Brandts Stræde, Strædet, Rådhusstræde'},
