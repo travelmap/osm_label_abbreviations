@@ -10,7 +10,7 @@ def main():
     #get required args from commandline
     parser = argparse.ArgumentParser(description='OSM label abbreviations')
     parser.add_argument('-d','--db', help='Database name. Example; osm_amsterdam',required=True)
-    parser.add_argument('-l','--language', help='Language to apply. Supported; [catalan, czech, dutch, english, french, german, italian, portugese, russian, spanish, swedish, turkish]', required=True)
+    parser.add_argument('-l','--language', help='Language to apply. Supported; [catalan, czech, danish, dutch, english, french, german, italian, portugese, russian, spanish, swedish, turkish]', required=True)
     args = parser.parse_args()
 
     #select dict
@@ -45,10 +45,10 @@ def main():
 	for language_abbreviation in language_abbreviations:
 		regex_match = language_abbreviation.get('match')
 		regex_replace = language_abbreviation.get('replace')
-		print("\tExecuting \"UPDATE {} SET name = regexp_replace(name, '{}', '{}', 'g');\" ".format(osm_table, regex_match, regex_replace)),
+		print("\tExecuting \"UPDATE {} SET name = regexp_replace(name, '{}', '{}', 'gi');\" ".format(osm_table, regex_match, regex_replace)),
 		stdout.flush()
 		try:
-		    update_query = "UPDATE %s" % (osm_table,) + " SET name = regexp_replace(name, %s, %s, 'g');"
+		    update_query = "UPDATE %s" % (osm_table,) + " SET name = regexp_replace(name, %s, %s, 'gi');"
 		    cursor.execute(update_query, (regex_match, regex_replace))
 		    conn.commit()
 		    print("done!")
