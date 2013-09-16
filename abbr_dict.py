@@ -53,6 +53,18 @@
         {'match':'^Náměstí\s+(.{4,})$',	 'replace':'Nám. \\1',	'concatenated':'no',	'separable':'yes',	'note':'Example: náměstí Karla IV.'},
         {'match':'^(.{4,})\s+Náměstí$',	 'replace':'\\1 Nám.',	'concatenated':'no',	'separable':'yes',	'note':'Example: Kozinovo náměstí'},
     ],
+    'danish':[
+        {'match':'^(.{5,})All[eé]+$',	 'replace':'\\1Al.',	'concatenated':'no',	'separable':'n/a',	'note':'Ave/Lane. Example: Egealle, Bernhard Bangs Alle, Søndre Allé'},
+        {'match':'\s+Boulevard$',	 'replace':' Blvd',	'concatenated':'no',	'separable':'n/a',	'note':'Example: Zeus Boulevard, Boulevarden'},
+        {'match':'^(.{5,})Gade$',	 'replace':'\\1Gd.',	'concatenated':'no',	'separable':'n/a',	'note':'Street. Example: Ågade, Vester Søgade, Niels Juels Gade'},
+        {'match':'^Lille\s+',	         'replace':'Ll. ',	'concatenated':'no',	'separable':'n/a',	'note':'Lesser (small). Example: Lille Lyngbyvej, Lillevænget, Stenlillevej'},
+        {'match':'(^.{5,}|^)Nordre(.{5,})$', 'replace'\\1Ndr\\1',	'concatenated':'no',	'separable':'n/a',	'note':'Northern. Example: Nordre Sørække, Haveforeningen Nordre Vang'},
+        {'match':'^(.{5,})Plads$',	 'replace':'\\1Pl.',	'concatenated':'no',	'separable':'n/a' ,	'note':'Quare. Example: Enghave Plads, Jernbanepladsen'}
+        {'match':'(^.{5,}|^)S[oø]+ndre(.{5,})$', 'replace':'\\1Sdr\\1',	'concatenated':'no',	'separable':'n/a',	'note':'Southern. Example: Søndre Damtoften, Ledøje Søndre Gade'},
+        {'match':'(^.{5,}|^)Store\s+',	 'replace':'\\1St. ',	'concatenated':'no',	'separable':'n/a',	'note':'Greater (big). Example: Store Valbyvej, Ishøj Store Torv'},
+        {'match':'^(.{5,})Stræde$',	 'replace':'\\1Str.',	'concatenated':'no',	'separable':'n/a',	'note':'Alley. Example: Steffen Brandts Stræde, Strædet, Rådhusstræde'},
+        {'match':'^Gammel(.{5,})$',	 'replace':'Gl.\\1',	'concatenated':'no',	'separable':'n/a',	'note':'Old. Example: Gammelmosevej, Gammel Roskildevej'},
+    ],
     'dutch':[
 	{'match':'^Burgemeester\s+',	 'replace':'Burg. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Burg. Patijnlaan" = "Burgemeester Patijnlaan"'},
 	{'match':'^Commandant\s+',	 'replace':'Cmdt. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Cmdt. Weynsstraat" = "Commandant Weynsstraat"'},
