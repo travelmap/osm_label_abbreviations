@@ -45,10 +45,10 @@ def main():
 	for language_abbreviation in language_abbreviations:
 		regex_match = language_abbreviation.get('match')
 		regex_replace = language_abbreviation.get('replace')
-		print("\tExecuting \"UPDATE {} SET name = regexp_replace(name, '{}', '{}', 'g');\" ".format(osm_table, regex_match, regex_replace)),
+		print("\tExecuting \"UPDATE {} SET name = regexp_replace(name, '{}', '{}', 'gi');\" ".format(osm_table, regex_match, regex_replace)),
 		stdout.flush()
 		try:
-		    update_query = "UPDATE %s" % (osm_table,) + " SET name = regexp_replace(name, %s, %s, 'g');"
+		    update_query = "UPDATE %s" % (osm_table,) + " SET name = regexp_replace(name, %s, %s, 'gi');"
 		    cursor.execute(update_query, (regex_match, regex_replace))
 		    conn.commit()
 		    print("done!")
