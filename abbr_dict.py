@@ -64,7 +64,7 @@
         {'match':'(^.{5,}|^)Store\s+',	 'replace':'\\1St. ',	'concatenated':'no',	'separable':'n/a',	'note':'Greater (big). Example: Store Valbyvej, Ishøj Store Torv'},
         {'match':'^(.{5,})Stræde$',	 'replace':'\\1Str.',	'concatenated':'no',	'separable':'n/a',	'note':'Alley. Example: Steffen Brandts Stræde, Strædet, Rådhusstræde'},
         {'match':'^Gammel(.{5,})$',	 'replace':'Gl.\\1',	'concatenated':'no',	'separable':'n/a',	'note':'Old. Example: Gammelmosevej, Gammel Roskildevej'},
-        {'match':'^(.{5,})Vej$',	 'replace':'V.\\1',	'concatenated':'no',	'separable':'n/a',	'note':'Way. Example: Gammel Roskildevej, Andersen Nexø Vej'},
+        {'match':'^(.{5,})Vej$',	 'replace':'\\1V.',	'concatenated':'no',	'separable':'n/a',	'note':'Way. Example: Gammel Roskildevej, Andersen Nexø Vej'},
     ],
     'dutch':[
 	{'match':'^Burgemeester\s+',	 'replace':'Burg. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Burg. Patijnlaan" = "Burgemeester Patijnlaan"'},
