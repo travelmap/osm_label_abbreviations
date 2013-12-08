@@ -199,6 +199,10 @@
         {'match':'(\w+)straße$',	 'replace':'\\1str.', 	'concatenated':'yes', 	'separable':'yes'}, 
 	{'match':'(\w+)strasse$',	 'replace':'\\1str.', 	'concatenated':'yes', 	'separable':'yes'}
     ],
+    'hungarian':[
+        {'match':'\s+(U|u)tca$',         'replace':' u.',	'concatenated':'no',	'separable':'n/a'},
+        {'match':'\s+(K|k)örút$',        'replace':' krt.',	'concatenated':'no',	'separable':'n/a'},
+    ],
     'italian':[
         {'match':'^Campo\s+',		 'replace':'C.po ',	'concatenated':'no',	'separable':'n/a'},
         {'match':'^Corso\s+',		 'replace':'C.so ',	'concatenated':'no',	'separable':'n/a'},
