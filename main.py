@@ -10,7 +10,7 @@ def main():
     #get required args from commandline
     parser = argparse.ArgumentParser(description='OSM label abbreviations')
     parser.add_argument('-d','--db', help='Database name. Example; osm_amsterdam',required=True)
-    parser.add_argument('-l','--language', help='Language to apply. Supported; [catalan, czech, danish, dutch, english, french, german, hungarian, italian, portugese, russian, spanish, swedish, turkish]', required=True)
+    parser.add_argument('-l','--language', help='Language to apply. Supported; [catalan, czech, danish, dutch, english, french, german, hungarian, italian, polish, portugese, russian, spanish, swedish, turkish]', required=True)
     args = parser.parse_args()
 
     #select dict

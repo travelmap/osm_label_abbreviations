@@ -1,4 +1,6 @@
-﻿abbreviations = {
+﻿#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+abbreviations = {
     'catalan':[
         {'match':'^Autopista\s+',	 'replace':'Auto. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Motorway'},
         {'match':'^Autovia\s+',	 	 'replace':'Autov. ',	'concatenated':'no',	'separable':'n/a' ,	'note':'Highway'},
@@ -73,14 +75,14 @@
         {'match':'^Ves(ter|tre)\s+(.{5,})$', 'replace':'Vst \\2',	'concatenated':'no',	'separable':'n/a',	'note':'Way. Example: Vestre Odinsvej, Vester Voldgade'},
     ],
     'dutch':[
-	{'match':'^Burgemeester\s+',	 'replace':'Burg. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Burg. Patijnlaan" = "Burgemeester Patijnlaan"'},
-	{'match':'^Commandant\s+',	 'replace':'Cmdt. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Cmdt. Weynsstraat" = "Commandant Weynsstraat"'},
-	{'match':'^doctor\s+',		 'replace':'dr ',	'concatenated':'no',	'separable':'yes'},
-	{'match':'^Dokter\s+',	 	 'replace':'Dr. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Dokter Crasbornplein" (? Is this correct ?)'},
-	{'match':'^Dominee\s+',	 	 'replace':'ds ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Dominee Theodor Fliednerstraat"'},
-	{'match':'^Gebroeders\s+',	 'replace':'Gebr. ',	'concatenated':'no',	'separable':'yes' ,	'note':'[brothers] "Gebr. Blommestr." = "Gebroeders Blommestraat"'},
-	{'match':'^Generaal\s+',	 'replace':'Gen. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Gen. Drubbelstr." = "Generaal Drubbelstraat"'},
-	{'match':'^(.+\w)gracht$',	 'replace':'\\1gr.',	'concatenated':'yes',	'separable':'yes' ,	'note':'[urban canal] "Herengr." = "Herengracht"'},
+        {'match':'^Burgemeester\s+',	 'replace':'Burg. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Burg. Patijnlaan" = "Burgemeester Patijnlaan"'},
+        {'match':'^Commandant\s+',	 'replace':'Cmdt. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Cmdt. Weynsstraat" = "Commandant Weynsstraat"'},
+        {'match':'^doctor\s+',		 'replace':'dr ',	'concatenated':'no',	'separable':'yes'},
+        {'match':'^Dokter\s+',	 	 'replace':'Dr. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Dokter Crasbornplein" (? Is this correct ?)'},
+        {'match':'^Dominee\s+',	 	 'replace':'ds ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Dominee Theodor Fliednerstraat"'},
+        {'match':'^Gebroeders\s+',	 'replace':'Gebr. ',	'concatenated':'no',	'separable':'yes' ,	'note':'[brothers] "Gebr. Blommestr." = "Gebroeders Blommestraat"'},
+        {'match':'^Generaal\s+',	 'replace':'Gen. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Gen. Drubbelstr." = "Generaal Drubbelstraat"'},
+        {'match':'^(.+\w)gracht$',	 'replace':'\\1gr.',	'concatenated':'yes',	'separable':'yes' ,	'note':'[urban canal] "Herengr." = "Herengracht"'},
         {'match':'^Ingenieur\s+',	 'replace':'Ir. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Ir. Menneslaan" = "Ingenieur Menneslaan" = "ir Mennesln"'},
         {'match':'^Jonkheer\s+',	 'replace':'Jhr. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Jhr. Marcus van Gerwenlaan"'},
         {'match':'^Kolonel\s+',		 'replace':'Kol. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Kol. Silvertopstraat" = "Kolonel Silvertopstraat"'},
@@ -105,11 +107,11 @@
         {'match':'^Professor\s+',	 'replace':'Prof. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"Prof. Willemsstraat"'},
         {'match':'^(.+\w)straat$',	 'replace':'\\1str.',	'concatenated':'yes',	'separable':'yes'},
         {'match':'^(.+\w)steenweg$',	 'replace':'\\1stwg.',	'concatenated':'yes',	'separable':'yes' ,	'note':'"Grotestwg." = "Grotesteenweg"'},
-	{'match':'^Sint\-\s+',		 'replace':'St. ',	'concatenated':'yes',	'separable':'yes' ,	'note':'"St. Paulusstr." = "St.-Paulusstr." = "Sint-Paulusstraat"'},
-	{'match':'^Van\s+',     	 'replace':'V. ',       'concatenated':'no',    'separable':'yes' ,     'note':'"V. Gentstraat" = "Van Gentstraat"'},
-	{'match':'^(.+\w) van (.+)$',	 'replace':'\\1 v \\2',	'concatenated':'no',	'separable':'yes' ,	'note':'"Jan v Gentstraat" = "Jan van Gentstraat"'},
-	{'match':'^Van De\s+',		 'replace':'V. D. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"V. D. Sweepstraat" = "Van De Sweepstraat" ="vd Sweepstr."'},
-	{'match':'^(.+\w)vliet\s+',	 'replace':'\\1vlt.',	'concatenated':'yes',	'separable':'yes' ,	'note':'"St.-Jansvlt." = "Sint-Jansvliet"'}
+        {'match':'^Sint\-\s+',		 'replace':'St. ',	'concatenated':'yes',	'separable':'yes' ,	'note':'"St. Paulusstr." = "St.-Paulusstr." = "Sint-Paulusstraat"'},
+        {'match':'^Van\s+',     	 'replace':'V. ',       'concatenated':'no',    'separable':'yes' ,     'note':'"V. Gentstraat" = "Van Gentstraat"'},
+        {'match':'^(.+\w) van (.+)$',	 'replace':'\\1 v \\2',	'concatenated':'no',	'separable':'yes' ,	'note':'"Jan v Gentstraat" = "Jan van Gentstraat"'},
+        {'match':'^Van De\s+',		 'replace':'V. D. ',	'concatenated':'no',	'separable':'yes' ,	'note':'"V. D. Sweepstraat" = "Van De Sweepstraat" ="vd Sweepstr."'},
+        {'match':'^(.+\w)vliet\s+',	 'replace':'\\1vlt.',	'concatenated':'yes',	'separable':'yes' ,	'note':'"St.-Jansvlt." = "Sint-Jansvliet"'}
     ],
     'english':[
         {'match':'\s+Alley$',	 	 'replace':' Aly',	'concatenated':'no',	'separable':'n/a'},
@@ -190,14 +192,14 @@
         {'match':'(^|\s+)Terrasses(\s+|$)', 'replace':'\\1TSSE\\2',	'concatenated':'no',	'separable':'n/a',	'note':'Example:Avenue des Terrasses'},
     ],
     'german':[
-	{'match':'^(.{4,})allee$', 	 'replace':'\\1Al.', 	'concatenated':'no', 	'separable':'yes',	'note':'Added for Austria. Example: lindenallee, lichte allee'},
-	{'match':'^(.{4,})gasse$', 	 'replace':'\\1G', 	'concatenated':'no', 	'separable':'yes',	'note':'Added for Austria. Example: burggasse, karl-lowe-Gasse'},
-	{'match':'(\s+|\-)Platz$',       'replace':'\\1Pl', 	'concatenated':'no', 	'separable':'yes'},
-	{'match':'(\w+)platz$', 	 'replace':'\\1pl.', 	'concatenated':'yes', 	'separable':'yes'},
-	{'match':'(\s+|\-)Straße$',      'replace':'\\1Str.', 	'concatenated':'no', 	'separable':'yes'},
+        {'match':'^(.{4,})allee$', 	 'replace':'\\1Al.', 	'concatenated':'no', 	'separable':'yes',	'note':'Added for Austria. Example: lindenallee, lichte allee'},
+        {'match':'^(.{4,})gasse$', 	 'replace':'\\1G', 	'concatenated':'no', 	'separable':'yes',	'note':'Added for Austria. Example: burggasse, karl-lowe-Gasse'},
+        {'match':'(\s+|\-)Platz$',       'replace':'\\1Pl', 	'concatenated':'no', 	'separable':'yes'},
+        {'match':'(\w+)platz$', 	 'replace':'\\1pl.', 	'concatenated':'yes', 	'separable':'yes'},
+        {'match':'(\s+|\-)Straße$',      'replace':'\\1Str.', 	'concatenated':'no', 	'separable':'yes'},
         {'match':'(\s+|\-)Strasse$',	 'replace':'\\1Str.', 	'concatenated':'no', 	'separable':'yes'},
         {'match':'(\w+)straße$',	 'replace':'\\1str.', 	'concatenated':'yes', 	'separable':'yes'}, 
-	{'match':'(\w+)strasse$',	 'replace':'\\1str.', 	'concatenated':'yes', 	'separable':'yes'}
+        {'match':'(\w+)strasse$',	 'replace':'\\1str.', 	'concatenated':'yes', 	'separable':'yes'}
     ],
     'hungarian':[
         {'match':'\s+(U|u)tca$',         'replace':' u.',	'concatenated':'no',	'separable':'n/a'},
@@ -226,12 +228,26 @@
         {'match':'^Vicolo\s+',		 'replace':'V.lo ',	'concatenated':'no',	'separable':'n/a'},
         {'match':'^Stazione\s+',	 'replace':'Staz. ',	'concatenated':'no',	'separable':'n/a'},
     ],
+    'polish':[
+        {'match':'^Aleja\s+',               'replace':'Al. ',	'concatenated':'no',	'separable':'yes',	'note':'Example: Aleja Jana Pawła II'},
+        {'match':'\s+Górn(y|a|e)$',         'replace':' Grn',	'concatenated':'no',	'separable':'yes',	'note':'Example: Zadworze Górne'},
+        {'match':'^Koło\s+',                'replace':'K.',     'concatenated':'no',	'separable':'yes',	'note':'Example: Koło Strzelnicy. Doesnt abbreviate concatenation labels like: Piasta Kołodzieja'},
+        {'match':'^Mała\s+',                'replace':'Mł ',	'concatenated':'no',	'separable':'yes',	'note':'Example: Mała Góra'},
+        {'match':'\s+Now(y|a|e)',           'replace':' Nw',	'concatenated':'no',	'separable':'yes',	'note':'Example: Osiedle Witkowice Nowe'},
+        {'match':'now(y|a|e)$',             'replace':'nw',     'concatenated':'no',	'separable':'yes',	'note':'Example: Kasztanowa'},
+        {'match':'^Osiedl(u|e)\s+',         'replace':'Os. ',	'concatenated':'no',	'separable':'yes',	'note':'Example: Osiedle Młodosci'},
+        {'match':'^Plac(u|m)*\s+',          'replace':'Pl. ',	'concatenated':'no',	'separable':'yes',	'note':'Example: Plac Błonie-Beszcz'},
+        {'match':'^Star(y|a|e)\s+',         'replace':'St. ',	'concatenated':'no',	'separable':'yes',	'note':'Example: Stare Wiślisko'},
+        {'match':'^Święt(ego|ej|ych)\s+',   'replace':'Św. ',	'concatenated':'no',	'separable':'yes',	'note':'Example: Świętego Krzyża. Doesnt abbreviate concatenation labels like: Świętokrzyska'},
+        {'match':'^Wielk(i|a|ie)\s+',       'replace':'Wlk ',	'concatenated':'no',	'separable':'yes',	'note':'Example: Wielkie Pola'},
+        {'match':'\s+Wielkopolsk(a|i|ie)$', 'replace':' Wlkp.',	'concatenated':'no',	'separable':'yes',	'note':'Example: Powstańców Wielkopolskich'},
+    ],
     'portugese':[
         {'match':'^Alameda\s+',		 'replace':'Al. ',	'concatenated':'no',	'separable':'n/a',	'note':'Example: Alameda Areeiro'},
         {'match':'^Avenida\s+',		 'replace':'Av. ',	'concatenated':'no',	'separable':'n/a',	'note':'Example: Avenida Angola'},
         {'match':'^Azinhaga\s+',	 'replace':'Az. ',	'concatenated':'no',	'separable':'n/a',	'note':'Example: Azinhaga da Torrinha, Rua da Azinhaga'},
         {'match':'^Bairro\s+',		 'replace':'Bair.',	'concatenated':'no',	'separable':'n/a',	'note':'Example: Bairro da Portuce, Rua Bairro Nascente'},
-	{'match':'^Beco\s+',		 'replace':'Bc. ',	'concatenated':'no',	'separable':'n/a',	'note':'Example: Beco Formosa, Caminho do Beco'},
+        {'match':'^Beco\s+',		 'replace':'Bc. ',	'concatenated':'no',	'separable':'n/a',	'note':'Example: Beco Formosa, Caminho do Beco'},
         {'match':'\s+Brigadeiro\s+',	 'replace':' Brig. ',	'concatenated':'no',	'separable':'n/a',	'note':'Example: Rua Brigadeiro Neves Costa'},
         {'match':'^Calçada\s+',		 'replace':'Cc ',	'concatenated':'no',	'separable':'n/a',	'note':'Example: Calçada do Barro, Rua das Calçadas'}, 
         {'match':'^Caminho',		 'replace':'Cam ',	'concatenated':'no',	'separable':'n/a',	'note':'Example: Caminho do Rio, Rua dos Quatro Caminhos'},
@@ -249,7 +265,7 @@
     ],
     'russian':[
         {'match':'^аллея\s+',		     'replace':'ал. ',		'concatenated':'no',	'separable':'n/a',	'note':'alleya - alley. Example: аллея Витте, Роскошная аллея, Аллея'},
-	{'match':'\s+аллея(\s+|^)',	     'replace':' ал.\\1',	'concatenated':'no',	'separable':'n/a',	'note':'alleya - alley. Example: Роскошная аллея, Липовая аллея (3-я)'},
+        {'match':'\s+аллея(\s+|^)',	     'replace':' ал.\\1',	'concatenated':'no',	'separable':'n/a',	'note':'alleya - alley. Example: Роскошная аллея, Липовая аллея (3-я)'},
         {'match':'^бульвар\s+',		     'replace':'бул. ',		'concatenated':'no',	'separable':'n/a',	'note':'bul\'var - boulevard. Example: бульвар Нестерова'},
         {'match':'\s+бульвар(\s+|^)',	     'replace':' бул.\\1',	'concatenated':'no',	'separable':'n/a',	'note':'bul\'var - boulevard. Example: бульвар Нестерова, Кронштадтский бульвар (дублёр)'},
         {'match':'(^|\s+)набережная(\s+|$)', 'replace':'\\1наб.\\1',	'concatenated':'no',	'separable':'n/a',	'note':'naberezhnaya - quay. Example: Лужнецкая набережная, набережная Шитова'},
